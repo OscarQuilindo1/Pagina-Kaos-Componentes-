@@ -244,4 +244,14 @@ body{
     cursor: pointer;
     outline: none;
   }
+
   
+.texto-justificado{
+  text-align: justify;
+  text-align: center;
+  }
+
+h2{
+  text-align: center;
+}
+

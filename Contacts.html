@@ -2,86 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactenos</title>
-    <link rel="stylesheet" href="assets/formulario.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactenos</title>
+  <link rel="stylesheet" href="assets/formulario.css">
 </head>
 
 <body>
-    <header>
+  <header>
+    <div>
+      <nav class="lineal">
         <div>
-            <nav class="lineal">
-                <div>
-                    <a href="Catalogo.php"><img src="assets/images/logo.jpg" alt=""></a>
-                </div>
-                <ul class="menu">
-                    <li><a href="Catalogo.php">Inicio</a></li>
-                    <li><a href="Services.html">Servicios</a></li>
-                    <li><a href="https://partes.speedlogic.com.co/?_gl=1*lxsj60*_ga*MzIzMjI0OTAwLjE2Mzc4NzQzODE.*_ga_CYCVDH01ZR*MTY0NjI2OTIwOC40LjAuMTY0NjI2OTIwOC4w&_ga=2.169908256.1297060025.1646269212-323224900.1637874381"
-                            target="_blank" rel="nofollow">Lista
-                            de Partes</a></li>
-                    <li><a href="Contacts.html">Contactenos</a></li>
-                </ul>
-            </nav>
+          <a href="Catalogo.php"><img src="assets/images/logo.jpg" alt=""></a>
         </div>
-    </header>
-    <br><br><br>
-    <form action="insertar.php" class="form" method="post" enctype="multipart/form-data">
+        <ul class="menu">
+          <li><a href="Catalogo.php">Inicio</a></li>
+          <li><a href="Services.html">Servicios</a></li>
+          <li><a
+              href="https://partes.speedlogic.com.co/?_gl=1*lxsj60*_ga*MzIzMjI0OTAwLjE2Mzc4NzQzODE.*_ga_CYCVDH01ZR*MTY0NjI2OTIwOC40LjAuMTY0NjI2OTIwOC4w&_ga=2.169908256.1297060025.1646269212-323224900.1637874381"
+              target="_blank" rel="nofollow">Lista
+              de Partes</a></li>
+          <li><a href="Contacts.html">Contactenos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br><br><br>
+  <div>
+      <h2>Contacte con Kaos Componentes</h2>
+      <p class="texto-justificado">Deja tus datos junto con una foto y un mensaje en el cual nos puedes aclarar el
+        motivo por el cual quieres contactar con nosotros</p>    
+  </div>
+  <form action="insertar.php" class="form" method="post" enctype="multipart/form-data">
     <div class="background">
-        <div class="container">
-          <div class="screen">
-            <div class="screen-header">
-              <div class="screen-header-left">
-                <div class="screen-header-button close"></div>
-                <div class="screen-header-button maximize"></div>
-                <div class="screen-header-button minimize"></div>
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>CONTACTO</span>
+                <span>KAOS Componentes</span>
               </div>
-              <div class="screen-header-right">
-                <div class="screen-header-ellipsis"></div>
-                <div class="screen-header-ellipsis"></div>
-                <div class="screen-header-ellipsis"></div>
+              <br><br>
+              <div class="file">
+                <input type="file" name="archivo" class="app-form-button" required>
               </div>
             </div>
-            <div class="screen-body">
-              <div class="screen-body-item left">
-                <div class="app-title">
-                  <span>CONTACTO</span>
-                  <span>KAOS Componentes</span>
+            <div class="screen-body-item">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="NAME" name="nombre">
                 </div>
-                <br><br>                    
-                <div class="file">
-                    <input type="file" name="archivo" class="app-form-button" required>                   
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="EMAIL" name="correo">
                 </div>
-              </div>
-              <div class="screen-body-item">
-                <div class="app-form">
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="NAME" name="nombre">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="EMAIL" name="correo">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="CONTACT NO" name="numero">
-                  </div>
-                  <div class="app-form-group message">
-                    <input class="app-form-control" placeholder="MESSAGE" name="mensaje">
-                  </div>
-                  <div class="app-form-group buttons">
-                    <button class="app-form-button">CANCEL</button>
-                    <button class="app-form-button">SEND</button>
-                  </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="CONTACT NO" name="numero">
+                </div>
+                <div class="app-form-group message">
+                  <input class="app-form-control" placeholder="MESSAGE" name="mensaje">
+                </div>
+                <div class="app-form-group buttons">
+                  <button class="app-form-button">SEND</button>
                 </div>
               </div>
             </div>
           </div>
-         
         </div>
+
       </div>
-    </form>
- 
+    </div>
+  </form>
+
 </body>
 
 </html>
