@@ -1,11 +1,13 @@
 <?php 
 $conexion = mysqli_connect("localhost","root","","kaos");
 
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$numero = $_POST["numero"];
-$mensaje = $_POST["mensaje"];
+$datos = array(
 
+$nombre = $_POST["nombre"],
+$correo = $_POST["correo"],
+$numero = $_POST["numero"],
+$mensaje = $_POST["mensaje"]
+);
 if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
     $nombre_final = date("m-d-y")."-".date("H-i-s")."-".$nombre_base;
@@ -24,5 +26,10 @@ if($_FILES["archivo"]){
 }else{
     echo "Error al subir archivo";
 }
+
+/*
+$archivo=fopen($_POST['nombre']."json","a");
+fwrite($archivo, json_encode($datos));
+fclose($archivo);*/
 
 ?>
