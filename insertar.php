@@ -21,7 +21,7 @@ fwrite($archivo, json_encode($datos));
 fclose($archivo);
 
 if($resultado = $archivo){
-    echo "<script>alert('Se ha subido el archivo'); window.location='Contacts.html'</script>";
+    echo "<script>alert('Se han enviado los datos'); window.location='Contacts.html'</script>";
 }else{
     printf("Errormessage: %s\n");
 }    
