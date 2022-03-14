@@ -16,7 +16,7 @@ if($_FILES["archivo"]){
 }
 
 
-$archivo=fopen($_POST['nombre']."json","a");
+$archivo=fopen($_POST['nombre'].".json","a");
 fwrite($archivo, json_encode($datos));
 fclose($archivo);
 
