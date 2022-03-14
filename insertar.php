@@ -8,7 +8,7 @@ $mensaje = $_POST["mensaje"]
 );
 if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
-    $nombre_final = date("m-d-y")."-".date("H-i-s")."-".$nombre_base;
+    $nombre_final = date("m-d-y")."-".$nombre."-".$nombre_base; 
     $ruta = "archivos/".$nombre_final;
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 }else{
