@@ -1,6 +1,4 @@
 <?php 
-$conexion = mysqli_connect("localhost","root","","kaos");
-
 $datos = array(
 
 $nombre = $_POST["nombre"],
@@ -13,7 +11,23 @@ if($_FILES["archivo"]){
     $nombre_final = date("m-d-y")."-".date("H-i-s")."-".$nombre_base;
     $ruta = "archivos/".$nombre_final;
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
-    if($subirarchivo){
+}else{
+    echo "Error al subir archivo";
+}
+
+
+$archivo=fopen($_POST['nombre']."json","a");
+fwrite($archivo, json_encode($datos));
+fclose($archivo);
+
+if($resultado = $archivo){
+    echo "<script>alert('Se ha subido el archivo'); window.location='Contacts.html'</script>";
+}else{
+    printf("Errormessage: %s\n");
+}    
+
+
+/*    if($subirarchivo){
         $insertarSQL = "INSERT INTO contactos(nombre, correo, numero, mensaje, archivo) VALUES ('$nombre',
         '$correo','$numero','$mensaje', '$ruta')";
         $resultado = mysqli_query($conexion, $insertarSQL);
@@ -22,14 +36,5 @@ if($_FILES["archivo"]){
         }else{
             printf("Errormessage: %s\n", mysqli_error($conexion));
         }
-    }
-}else{
-    echo "Error al subir archivo";
-}
-
-/*
-$archivo=fopen($_POST['nombre']."json","a");
-fwrite($archivo, json_encode($datos));
-fclose($archivo);*/
-
+    }*/
 ?>
