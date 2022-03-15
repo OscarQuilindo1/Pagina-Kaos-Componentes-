@@ -1,11 +1,11 @@
 <?php 
-$datos = array(
 
-$nombre = $_POST["nombre"],
-$correo = $_POST["correo"],
-$numero = $_POST["numero"],
-$mensaje = $_POST["mensaje"]
-);
+$nombre = $_POST["nombre"];
+$correo = $_POST["correo"];
+$numero = $_POST["numero"];
+$mensaje = $_POST["mensaje"];
+$datos=[];
+
 if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
     $nombre_final = date("m-d-y")."-".$nombre."-".$nombre_base; 
@@ -15,12 +15,31 @@ if($_FILES["archivo"]){
     echo "Error al subir archivo";
 }
 
+$data = "data/db.json";
+$puntero = @fopen($data, "a+");
 
-$archivo=fopen($_POST['nombre'].".json","a");
+
+if(!$puntero)
+{	  
+   echo 'NOK';
+}
+else
+{
+  array_push($datos,array ('nombre' => $nombre));
+  array_push($datos,array ('correo' => $correo));
+  array_push($datos,array ('numero' => $numero));
+  array_push($datos,array ('mensaje' => $mensaje));
+  $nombre_final = "archivos/".$nombre_final;
+  array_push($datos,array($nombre_final));  
+  $datos = json_encode($datos);
+  fwrite($puntero,$datos);
+}
+
+/*$archivo=fopen($_POST['nombre'].".json","a");
 fwrite($archivo, json_encode($datos));
-fclose($archivo);
+fclose($archivo);*/
 
-if($resultado = $archivo){
+if($resultado = $puntero){
     echo "<script>alert('Se han enviado los datos'); window.location='Contacts.html'</script>";
 }else{
     printf("Errormessage: %s\n");
