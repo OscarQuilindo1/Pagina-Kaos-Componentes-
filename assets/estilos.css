@@ -1,3 +1,4 @@
+/*Dentro de este archivo .css se encuentra el diseño del menu de navegacion y además el diseño del efecto dado al catalogo */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: white;
@@ -36,6 +37,7 @@ body{
  margin-left: 15px;
 }
 
+/*Diseño del catalogo*/
 .container{
     width: auto;
     max-width: auto;

@@ -1,3 +1,4 @@
+/*Dentro de este archivo .css se encuentra el diseño del menu de navegacion y ademas el diseño del formulario*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: white;
@@ -35,8 +36,8 @@ body{
 .lineal{
  margin-left: 15px;
 }
-
-  .background {
+/*Incio del diseño del formulario*/
+.background {
     display: flex;
     min-height: 100vh;
   }

@@ -11,6 +11,7 @@
 </head>
 <body>
 <header>
+<!--Dentro de este header si crea el menu de opciones de la pagina-->
         <div>
             <nav class="lineal">
                 <div>
@@ -29,6 +30,7 @@
     <div><center><h2>Catalogo de Productos</h2></center></div>
     <br><br><br>
     <div class="container">
+ <!--Se realiza la conexión con la base de datos para traer las imagenes que hacen parte del catalogo-->       
     <?php 
         include("conexion/conexiones.php");
                 $query = "SELECT * FROM catalogo";

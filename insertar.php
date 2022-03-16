@@ -6,6 +6,9 @@ $numero = $_POST["numero"];
 $mensaje = $_POST["mensaje"];
 $datos=[];
 
+/* El siguiente if me permite cambiar el nombre del archivo que el usuario seleccion,
+cambiar su ruta de destino y almacenarlo en una carpeta especifica, funciona tanto para la implementación
+mediante  un json como para subir el archivo a la base de datos*/
 if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
     $nombre_final = date("m-d-y")."-".$nombre."-".$nombre_base; 
@@ -14,7 +17,9 @@ if($_FILES["archivo"]){
 }else{
     echo "Error al subir archivo";
 }
-
+/*Se agregan todos los tados enviados por el usuario a un archivo .json el cual resive nombre,correo,
+numero, mensaje y ademas se le agrega una liena extra de codigo para expecificar donde se guarda
+la imagen o archivo subido*/ 
 $data = "data/db.json";
 $puntero = @fopen($data, "a+");
 
@@ -35,10 +40,7 @@ else
   fwrite($puntero,$datos);
 }
 
-/*$archivo=fopen($_POST['nombre'].".json","a");
-fwrite($archivo, json_encode($datos));
-fclose($archivo);*/
-
+//Este if genera un alert que le dice al usuario que su datos fueron enviados y lo retorna a la pagina Contacts
 if($resultado = $puntero){
     echo "<script>alert('Se han enviado los datos'); window.location='Contacts.html'</script>";
 }else{
@@ -46,7 +48,8 @@ if($resultado = $puntero){
 }    
 
 
-/*    if($subirarchivo){
+/*  lineas de codigo que permite subir los datos y la imganes a la base de datos 
+   if($subirarchivo){
         $insertarSQL = "INSERT INTO contactos(nombre, correo, numero, mensaje, archivo) VALUES ('$nombre',
         '$correo','$numero','$mensaje', '$ruta')";
         $resultado = mysqli_query($conexion, $insertarSQL);
