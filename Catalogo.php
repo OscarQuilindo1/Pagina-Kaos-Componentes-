@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-<!--Dentro de este header si crea el menu de opciones de la pagina-->
+<!--Dentro de este header se crea el menu de opciones de la pagina-->
         <div>
             <nav class="lineal">
                 <div>
