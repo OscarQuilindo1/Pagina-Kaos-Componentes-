@@ -40,6 +40,7 @@
                     <div class="card">
                         <img src="data:imge/jpg;base64, <?php echo base64_encode($row['imagen']);?>" alt="">
                         <h4><?php echo $row['nombre']; ?></h4>
+                        <h3><?php echo $row['precio'],$row['moneda'];?></h3>
                         <a href="#">Comprar</a>
                     </div> 
                     <?php
@@ -48,5 +49,7 @@
         ?>
 
     </div>
+
+    
 </body>
 </html>
