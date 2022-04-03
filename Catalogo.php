@@ -12,7 +12,9 @@ include("conexion/conexiones.php");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
     <title>Kaos Componentes</title>
     
 
@@ -57,7 +59,7 @@ include("conexion/conexiones.php");
 
                     <form id="formulario" name="formulario" method="post" action="cart.php">
                         <div class="blog-post ">
-                            <img src="data:imge/jpg;base64,<?php echo base64_encode($resultado['imagen']); ?>" >
+                            <img src="data:img/jpg;base64,<?php echo base64_encode($resultado['imagen']); ?>" >
                             <a class="category">
                                 <?php echo $resultado["precio"]; ?>€
                             </a>
