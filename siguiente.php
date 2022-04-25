@@ -1,4 +1,4 @@
-<?php  session_start();
+<?php session_start();
 include("conexion/conexiones.php");
 ?>
 
@@ -151,7 +151,7 @@ include("conexion/conexiones.php");
             </div>
         </div>
 
-        <a type="button" class="btn btn-success my-4" href="../Carrito de compra paso 4/.php">Continuar pedido</a>
+        <a type="button" class="btn btn-success my-4" href="carrito/consulta.php">Continuar pedido</a>
 
     </div>
 </div>
