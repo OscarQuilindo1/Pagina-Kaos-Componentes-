@@ -2,6 +2,7 @@
 include("../conexion/conexiones.php");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -166,7 +167,7 @@ include("../conexion/conexiones.php");
 
 <!-- datos cliente -->
 <div class="container p-5">
-<form class="row g-3 needs-validation" action="pagar.php" method="POST" novalidate>
+<form class="row g-3 needs-validation" action="pagamongo.php" method="POST" novalidate>
 
 <p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Datos de envío</p>
 
