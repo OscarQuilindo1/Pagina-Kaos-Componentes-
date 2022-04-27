@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once ("mongo.php");
 
 
 $nombre= $_POST['nombre'];
@@ -9,7 +9,7 @@ $localidad= $_POST['localidad'];
 $telefono= $_POST['telefono'];
 
 
-$collection = (new MongoDB\Client)->mydb->users;
+
 
 $insertOneResult = $collection->insertOne([
     'nombre' => $nombre,
@@ -17,7 +17,7 @@ $insertOneResult = $collection->insertOne([
     'localidad' => $localidad,
     'telefono' => $telefono,
 ]);
-
+header("Location:factura.php");
 /*if($_POST){
     $insert= array(
         $nombre= $_POST['nombre'],
