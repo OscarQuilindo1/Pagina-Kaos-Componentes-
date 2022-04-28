@@ -19,7 +19,7 @@ $insertOneResult = $collection->insertOne([
     'cvv' => $cvv,
     'fecha' => $fecha,
 ]);
-header("Location:catalogo.php");
+header("Location:invoice.php");
 
 
 ?>
