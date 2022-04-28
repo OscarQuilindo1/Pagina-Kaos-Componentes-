@@ -100,6 +100,63 @@ if($collection->count()>0){
                 </div>
         </div>
 </div>
+
+
+
+<!-- datos cliente -->
+<div class="container p-5">
+<form class="row g-3 needs-validation" action="paga.php" method="POST" novalidate>
+
+<p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Datos de Pago</p>
+
+<input type="hidden" name="dato" value="insertar" >
+  <div class="col-md-6">
+    <label for="validationCustom01" class="form-label">Nombre del titular</label>
+    <input type="text" class="form-control" id="validationCustom01" name="nombre" value=""  required>
+    <div class="valid-feedback">
+    Correcto!
+    </div>
+      <div class="invalid-feedback">
+      Por favor, inserte su nombre.
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom02" class="form-label">Numero de tarjeta</label>
+    <input type="text" class="form-control" id="validationCustom02" name="numero" value=""  required>
+    <div class="valid-feedback">
+    Correcto!
+    </div>
+      <div class="invalid-feedback">
+      Por favor, inserte el numero de tarjeta.
+      </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">cvv</label>
+    <input type="text" class="form-control" id="validationCustom03" name="cvv" value=""  required>
+    <div class="valid-feedback">
+    Correcto!
+    </div>
+      <div class="invalid-feedback">
+      Por favor, inserte su cvv.
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom04" class="form-label">Fecha</label>
+    <input type="text" class="form-control" id="validationCustom04" name="fecha" value=""  required>
+    <div class="valid-feedback">
+    Correcto!
+    </div>
+      <div class="invalid-feedback">
+      Por favor, inserte la fecha de vencimiento.
+      </div>
+  </div>
+  <button  class="btn btn-success mb-4" type="submit">Finalizar</button>
+
+</form>
+
+</div>
+
 <!-- END vista B -->
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>

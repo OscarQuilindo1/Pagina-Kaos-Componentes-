@@ -213,15 +213,10 @@ include("../conexion/conexiones.php");
       Por favor, inserte su teléfono.
       </div>
   </div>
-
-
   <button  class="btn btn-success mb-4" type="submit">Pagar y finalizar</button>
 
-
-
-
-
 </form>
+
 </div>
 
 
