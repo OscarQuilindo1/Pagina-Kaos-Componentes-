@@ -205,10 +205,9 @@ if($collection->count()>0){
 
 
 
-
-
-
-
+</div>
+<a type="button" class="btn btn-success my-4" href="../Catalogo.php">Volver al inicio</a>
+</div>
 
      
 
